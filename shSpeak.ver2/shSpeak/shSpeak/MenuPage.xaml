@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cirImage ="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:controls="clr-namespace:shSpeak.controls"
+             x:Class="shSpeak.MenuPage"
+             Title="Menu">
+
+    <StackLayout BackgroundColor="Transparent" Spacing="0">
+
+        <StackLayout BackgroundColor="#55A0CD" HeightRequest="200">
+            <cirImage:CircleImage x:Name="UserImg" Source="User.png" Aspect="AspectFit" BorderThickness="1" BorderColor="#55A0CD" HeightRequest="150" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <TableView Intent="Menu" Margin="0,0" RowHeight="60">
+            <TableRoot>
+                <TableSection>
+
+                    <ViewCell x:Name="loadFile" Tapped="loadFile_Tapped">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="folder_open.png"  WidthRequest="28" HeightRequest="28" Margin="15,0"></Image>
+                            <Label Text="텍스트 파일 선택" VerticalOptions="Center" FontSize="16" TextColor="White"></Label>
+                        </StackLayout>
+                    </ViewCell>
+
+                    <ViewCell  x:Name="BgPng" Tapped="BgPng_Tapped">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="insert_photo.png"  WidthRequest="28" HeightRequest="28" Margin="15,0"></Image>
+                            <Label Text="배경 이미지 선택" VerticalOptions="Center" FontSize="16" TextColor="White"></Label>
+                        </StackLayout>
+                    </ViewCell>
+
+                    <ViewCell x:Name="ProPng" Tapped="ProPng_Tapped">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="insert_photo.png"  WidthRequest="28" HeightRequest="28" Margin="15,0"></Image>
+                            <Label Text="얼굴 이미지 선택" VerticalOptions="Center" FontSize="16" TextColor="White"></Label>
+                        </StackLayout>
+                    </ViewCell>
+
+                    <ViewCell x:Name="DeletePng" Tapped="DeletePng_Tapped">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="del_photo.png"  WidthRequest="28" HeightRequest="28" Margin="15,0"></Image>
+                            <Label Text="이미지 원래대로 돌리기" VerticalOptions="Center" FontSize="16" TextColor="White"></Label>
+                        </StackLayout>
+                    </ViewCell>
+
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <StackLayout BackgroundColor="#55A0CD" HeightRequest="50" Orientation="Horizontal">
+            <controls:ImageButton IsVisible="False" Source="SwitchCamera.png" WidthRequest="28" HeightRequest="28" Margin="15,0" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Click="ImageButton_Click" />
+            <controls:ImageButton Source="flashLight.png" WidthRequest="28" HeightRequest="28" Margin="15,0" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Click="ImageButton_Click" />
+        </StackLayout>
+
+    </StackLayout>
+
+
+</ContentPage>
