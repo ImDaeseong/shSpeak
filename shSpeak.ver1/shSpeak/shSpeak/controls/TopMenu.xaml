@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:shSpeak.controls"
+             xmlns:renderers ="clr-namespace:shSpeak.Renderers"
+             x:Class="shSpeak.controls.TopMenu"
+             Padding="0">
+    
+  <ContentView.Content>
+        <StackLayout x:Name="TopMenubgColor" Orientation="Horizontal" BackgroundColor="#63ACD5">
+
+            <controls:MarqueeView x:Name="mView" Margin="5,0,5,0" HorizontalOptions="Start" VerticalOptions="Center" />
+
+            <Frame x:Name="fMenu" Padding="0" Margin="1,1,5,1" HorizontalOptions="EndAndExpand" OutlineColor="Transparent" BackgroundColor="Transparent" HasShadow="False" IsVisible="True">
+                <StackLayout Orientation="Horizontal" Padding="0">
+                    <renderers:IconView x:Name="x1" VerticalOptions="Center" Source="slideout.png" Scale="0.8" Foreground="White">
+                        <renderers:IconView.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped_1" />
+                        </renderers:IconView.GestureRecognizers>
+                    </renderers:IconView>
+                </StackLayout>
+            </Frame>
+
+            <Frame x:Name="fMenuSelect" Padding="0" Margin="1,1,5,1" HorizontalOptions="EndAndExpand" OutlineColor="Transparent" BackgroundColor="Transparent" HasShadow="False" IsVisible="False">
+
+                <StackLayout Orientation="Horizontal" Padding="0">
+
+                    <renderers:IconView x:Name="x5" VerticalOptions="Center" Source="eraser.png" Scale="0.8" Foreground="White">
+                        <renderers:IconView.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped_5" />
+                        </renderers:IconView.GestureRecognizers>
+                    </renderers:IconView>
+
+                    <renderers:IconView x:Name="x4" VerticalOptions="Center" Source="SelectBgPhoto.png" Scale="0.8" Foreground="White">
+                        <renderers:IconView.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped_4" />
+                        </renderers:IconView.GestureRecognizers>
+                    </renderers:IconView>
+
+                    <renderers:IconView x:Name="x3" VerticalOptions="Center" Source="SelectUserPhoto.png" Scale="0.8" Foreground="White">
+                        <renderers:IconView.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped_3" />
+                        </renderers:IconView.GestureRecognizers>
+                    </renderers:IconView>
+
+                    <renderers:IconView x:Name="x2" VerticalOptions="Center" Source="slideout.png" Scale="0.8"  Foreground="White">
+                        <renderers:IconView.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped_2" />
+                        </renderers:IconView.GestureRecognizers>
+                    </renderers:IconView>
+
+                </StackLayout>
+
+            </Frame>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

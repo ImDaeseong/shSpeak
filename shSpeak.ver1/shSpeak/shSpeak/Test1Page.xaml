@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:shSpeak"
+             x:Class="shSpeak.Test1Page">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 20, 0, 0" />
+    </ContentPage.Padding>
+
+    <StackLayout>
+        <Button Text="카메라" Clicked="TakeCamera_Clicked"/>
+        <Button Text="이미지 선택" Clicked="SelectImage_Clicked"/>
+
+        <Image x:Name="image" Aspect="AspectFill" />
+
+        <Label Text="목소리의 높낮이" HorizontalOptions="StartAndExpand" Margin="5,0,5,0" />
+        <Slider x:Name="sliderPitch" />
+        <Label Text="말하는 속도" HorizontalOptions="StartAndExpand" Margin="5,0,5,0" />
+        <Slider x:Name="sliderRate" />
+
+        <Entry x:Name="textlabel" Text="글자를 입력하세요."></Entry>
+        <Button Text="말하기" HorizontalOptions="StartAndExpand" Clicked="Button_Clicked"  />
+
+    </StackLayout>
+
+    
+</ContentPage>
