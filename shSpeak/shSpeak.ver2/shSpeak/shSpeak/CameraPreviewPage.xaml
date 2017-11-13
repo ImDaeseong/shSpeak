@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:shSpeak.controls"
+             x:Class="shSpeak.CameraPreviewPage"
+             BackgroundColor="#55A0CD" >
+    
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0"
+                  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+			      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="AUTO" />
+            </Grid.RowDefinitions>
+            
+            <controls:TopMenu Grid.Row="0" x:Name="fTopMenu" Click="fTopMenu_Click" />
+            
+            <controls:CameraPreview  Grid.Row="1" x:Name="cameraPreview" HeightRequest="200" Margin="5,5,5,5" />
+            <Image Grid.Row="1" Source="SwitchCamera.png"  HeightRequest="30" WidthRequest="30" HorizontalOptions="EndAndExpand" VerticalOptions="Start" Margin="5,5,5,5">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SwitchCamera_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+        </Grid>        
+    </ContentPage.Content>
+    
+</ContentPage>
